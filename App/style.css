@@ -1,7 +1,7 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    color: #fff;
+    font-weight: bold;
 }
 
 body {
@@ -50,17 +50,6 @@ p {
     cursor: pointer;
 }
 
-.resgister-btn {
-    border: 1px solid rgb(77, 44, 245);
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.resgister-btn:hover {
-    background-color: rgb(109, 85, 231);
-    color: white;
-}
 
 .title {
     margin-top: 30px;
@@ -81,8 +70,37 @@ p {
     padding: 20px;
     width: 50%;
     border-radius: 10px;
+    color: black;
+}
 
 
+.button {
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(109, 85, 231);
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.short-url span {
+    color: rgb(255, 255, 255);
+
+}
+
+.short-url {
+    text-align: left;
+    margin-top: 50px;
+    width: 63%;
+    font-size: 25px;
+}
+
+.short-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .short-link {
@@ -90,13 +108,12 @@ p {
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+    width: 100%;
 }
 
-.button {
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    background-color: rgb(109, 85, 231);
-    color: white;
-    margin-left: 20px;
+.url-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
