@@ -1,9 +1,13 @@
 const input_box = document.querySelector('.input');
 const result = document.getElementById('result');
 const icon = document.querySelector('.icon');
+const clearButton = document.querySelector('.clear-button');
 
 
 icon.addEventListener("click", copyUrl);
+clearButton.addEventListener("click", clearFunc);
+
+
 
 async function shortUrl() {
     const value = input_box.value;
@@ -28,4 +32,8 @@ function copyUrl() {
     }
 }
 
+function clearFunc() {
+    input_box.value = "";
+    result.textContent = ""
+}
 
