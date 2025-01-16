@@ -1,13 +1,31 @@
 const input_box = document.querySelector('.input');
 const result = document.getElementById('result');
+const icon = document.querySelector('.icon');
+
+
+icon.addEventListener("click", copyUrl);
+
 async function shortUrl() {
     const value = input_box.value;
-    const response = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(value)}`)
-    if (response.ok) {
-        const data = await response.text();
-        result.textContent = data
-
-    } else {
-        document.getElementById('result').innerHTML = "Error Shortening Url"
+    try {
+        const response = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(value)}`);
+        if (response.ok) {
+            const data = await response.text();
+            result.textContent = data;
+        } else {
+            result.textContent = "Error Shortening Url";
+        }
+    } catch (error) {
+        result.textContent = "Network Error";
     }
 }
+
+function copyUrl() {
+    const urlToCopy = result.textContent;
+    if (urlToCopy) {
+        navigator.clipboard.writeText(urlToCopy)
+        alert(`${urlToCopy} - Url Copied To Clipboard`)
+    }
+}
+
+

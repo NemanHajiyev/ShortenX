@@ -1,7 +1,6 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    font-weight: bold;
 }
 
 body {
@@ -26,7 +25,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 3px solid lightgray;
+    border-bottom: 3px solid rgb(109, 85, 231);
     align-items: center;
     margin-top: 30px;
     padding: 0 15px;
@@ -44,13 +43,6 @@ body {
     align-items: center;
 }
 
-p {
-    font-weight: 500;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-
 .title {
     margin-top: 30px;
     font-size: 25px;
@@ -64,15 +56,19 @@ p {
     margin-top: -20px;
 }
 
+.icon {
+    cursor: pointer;
+}
+
 .input {
     border: 2px solid rgb(109, 85, 231);
     outline: none;
-    padding: 20px;
+    padding: 18px;
     width: 50%;
     border-radius: 10px;
+    font-size: 20px;
     color: black;
 }
-
 
 .button {
     padding: 18px;
@@ -85,22 +81,23 @@ p {
     font-size: 20px;
 }
 
-.short-url span {
-    color: rgb(255, 255, 255);
-
-}
-
 .short-url {
-    text-align: left;
-    margin-top: 50px;
     width: 63%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 25px;
+    border: 2px solid rgb(109, 85, 231);
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
 }
 
 .short-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .short-link {
@@ -111,9 +108,24 @@ p {
     width: 100%;
 }
 
-.url-box {
+.copy-box {
+    width: 210px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    flex-direction: column;
+}
+
+#result {
+    margin-right: 65px;
+}
+
+.clear-button {
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(109, 85, 231);
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20 px;
 }

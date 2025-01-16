@@ -25,13 +25,19 @@
             <h1>Smart and powerful short links</h1>
             <p>Stay in control of your links with advanced features for shortening and tracking.</p>
         </div>
-
         <div class="short-link">
             <input type="text" class="input">
             <button onclick="shortUrl()" class="button">Shorthand</button>
         </div>
         <div class="short-box">
-            <div class="short-url">Short Url : <span id="result"></span> <i class="fa-solid fa-copy icon"></i></div>
+            <div class="short-url">
+                <span>Short Url :</span>
+                <span id="result"></span>
+                <div class="copy-box">
+                    <i class="fa-solid fa-copy icon"></i>
+                    <button class="clear-button">Clear</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="./app.js"></script>
